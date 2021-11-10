@@ -1,0 +1,59 @@
+# = Super Admin
+$ = Usuário comum
+/ = pasta raiz
+
+MODOS DE UTILIZAÇÃO (TEXTO/GRÁFICO)
+6 sessões em modo texto (ALT + F1 AO F6)
+2 sessões em modo gráfico (ALT + F7/F8)
+
+COMANDOS
+history = mostra o histórico de comandos usados
+Shift + Page Up ou Shift + Page Down = Simula scroll do mouse.
+clear ou Ctrl + L = limpa a tela.
+loadkeys br-abnt2 = define teclado pt-br.
+ls = lista conteúdo de um diretório.
+tecla Tab = auto completa comando.
+tecla Tab (2x) = mostra a lista de comandos começado com o que já foi digitado.
+cd + caminho diretório = acessa o diretório ("pasta").
+cd .. = volta um nível (1 diretório).
+cd - = volta para o último diretório acessado.
+cd ../NOME_DO_DIRETORIO = volta e acessar um outro diretorio no diretório atual.
+pwd = mostra o diretório atual.
+exit = terminar/encerrar sessão.
+logout = terminar/encerrar sessão.
+CTRL + D = terminar/encerrar sessão.
+shutdown -h now = desligar o sistema.
+init 0 = desligar o sistema.
+halt = desligar o sistema.
+poweroff = desligar o sistema.
+reboot = reinicia o sistema.
+init 6 = reinicia o sistema.
+CTRL + ALT + DEL = reinicia o sistema.
+man + COMANDO = manual completo do comando. (Ex: man ls)
+info + COMANDO = manual completo do comando. (Ex: info ls)
+cal + ANO = exibe calendário mês/ano. (EX: cal 2021)
+date = exibe a data e hora do sistema.
+
+ESTRUTURA DE DIRETÓRIO
+/ = raiz
+
+DIRETÓRIOS DO LINUX (FHS - FILESYSTEM HIERACHY STANDARD)
+/       Raiz do sistema operacional
+/boot   Contém arquivos necessários para inicialização do sistema.
+/etc    Arquivos de configuração de sistema e de serviços de rede (pacotes) instalados (por padrão).
+/bin    Contém os programas/comandos básicos do sistema para uso dos usuários.
+/sbin   Contém os programas/comandos acessíveis pelo super usuário (root) para administração do sistema.
+/var    Contém os logs do sistema e dados de spool de impressora e cache.
+/root   Diterório do usuário root, o administrador so sistema.
+/home   Diretório que contém os subdiretórios de cada usuário (análogo ao "Users" ou o antigo "Documents and Settings").
+/dev    Permite acesso aos dispositivos do sistema.
+/lib    Bibliotecas compartilhadas pelos programas do sistema e módulos do kernel.
+/proc   Sistema de arquivos do kernal. Este diertório não existe em seu disco rígido, ele é criado pelo kernel e usado 
+        por diversos programas que fazem sua leitura. Através de seu conteúdo podemos verificar configurações do sistema 
+        ou modificar o funcionamento de dispositivos através de alterações em seus arquivos (como a funçõa de roteamento).
+/usr    Contém arquivos e aplicativos de usuários do sistema, "documentações" do sistema, entre outros tipos de arquivo.
+
+PERMISSÕES DE ACESSO
+r = read (leitura)
+w = write (gravação)
+x = execute (execução)
