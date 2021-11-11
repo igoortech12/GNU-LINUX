@@ -81,6 +81,8 @@ DIRETÓRIOS DO LINUX (FHS - FILESYSTEM HIERACHY STANDARD)
 
 MAIS DETALHES - DIRETÓRIO
 /var/log/auth.log = mostra log com as tentativas de login recebidas.
+/etc/passwd = lista usuários.
+/dev/null = buraco negro do Linux.
 
 PERMISSÕES DE ACESSO
 r = read (leitura)
