@@ -8,10 +8,11 @@ MODOS DE UTILIZAÇÃO (TEXTO/GRÁFICO)
 
 COMANDOS
 history = mostra o histórico de comandos usados
-Shift + Page Up ou Shift + Page Down = Simula scroll do mouse.
-clear ou Ctrl + L = limpa a tela.
+clear = limpa a tela.
 loadkeys br-abnt2 = define teclado pt-br.
 ls = lista conteúdo de um diretório.
+ls -l = mostra conteúdo listado com detalhes.
+ls -lh = mostra conteúdo listado com detalhes "humano".
 tecla Tab = auto completa comando.
 tecla Tab (2x) = mostra a lista de comandos começado com o que já foi digitado.
 cd + caminho diretório = acessa o diretório ("pasta").
@@ -21,18 +22,38 @@ cd ../NOME_DO_DIRETORIO = volta e acessar um outro diretorio no diretório atual
 pwd = mostra o diretório atual.
 exit = terminar/encerrar sessão.
 logout = terminar/encerrar sessão.
-CTRL + D = terminar/encerrar sessão.
 shutdown -h now = desligar o sistema.
 init 0 = desligar o sistema.
 halt = desligar o sistema.
 poweroff = desligar o sistema.
 reboot = reinicia o sistema.
 init 6 = reinicia o sistema.
-CTRL + ALT + DEL = reinicia o sistema.
 man + COMANDO = manual completo do comando. (Ex: man ls)
 info + COMANDO = manual completo do comando. (Ex: info ls)
 cal + ANO = exibe calendário mês/ano. (EX: cal 2021)
 date = exibe a data e hora do sistema.
+mkdir = cria novo diretório.
+rmdir = remove/apaga diretório. (apenas diretórios vazios)
+rm = apaga arquivos.
+rm -r = remove/apaga diretório com todo seu conteúdo.
+rm -rf = remove/apaga diretório com todo seu conteúdo de modo forçado.
+rm -rf * = APAGA TUDO!!! (CUIDADO!!!)
+tree = mostra os diretórios em forma hierárquica. 
+touch = DIVERSOS USO!
+mv = move ou renomeia arquivo.
+cp = copia arquivo.
+cp -r = copia diretório com arquivos.
+ln -s = cria link simbólico (atalho).
+find = localizar arquivo.
+du -h = mostra espaço usado por cada item + diretório.
+du -hs = mostra a soma do espaço usado.
+
+CTRL + ALT + DEL = reinicia o sistema.
+CTRL + D = terminar/encerrar sessão.
+Ctrl + L = limpa a tela.
+Shift + Page Up ou Shift + Page Down = Simula scroll do mouse.
+Ctrl + R = pesquisa de algum comando já utilizado.
+
 
 ESTRUTURA DE DIRETÓRIO
 / = raiz
