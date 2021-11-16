@@ -44,7 +44,7 @@ mv = move ou renomeia arquivo.
 cp = copia arquivo.
 cp -r = copia diretório com arquivos.
 ln -s = cria link simbólico (atalho).
-find = localizar arquivo.
+find = localizar arquivo. (Ex: find /root/ -name NOME_DO_ARQUIVO)
 du -h = mostra espaço usado por cada item + diretório.
 du -hs = mostra a soma do espaço usado.
 cat = exibe texto na tela. (ideal para textos curtos)
@@ -52,6 +52,11 @@ more = exibe texto na tela. (ideal para textos grandes)
 less = exibe texto na tela. (ideal para textos grandes)
 head = exibe as primeiras linhas do arquivo.
 tail = exibe as ultimas linhas do arquivo.
+
+FILTROS
+
+
+COMPACTADORES E DESCOMPACTADORES
 
 CTRL + ALT + DEL = reinicia o sistema.
 CTRL + D = terminar/encerrar sessão.
