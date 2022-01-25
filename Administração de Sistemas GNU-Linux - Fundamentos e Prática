@@ -68,6 +68,20 @@ diff = Compara o conteúdo de dois arquivos e exibe as diferenças
 sort = Ordena alfabeticamente um determinado arquivo ou entrada padrão
 awk = 
 
+INFORMAÇÕES DO SISTEMA
+uname -a = Exibe informações sobre o sistema. Versão do Kernel.
+uptime = Tempo da máquina ligada
+top = Tempo da máquina ligada com mais detalhes
+free -m = Memória utilizada
+        -m: mg
+        -g: gb
+        -k: kb
+        -s: tempo de exibição. Ex: free -s 2 (a cada 2 segundos)
+df -h = informação sobre espaço livre em disco.
+du -hs = informação ocupação em disco em um diretório.
+file = exibe o tipo de um determinado arquivo.
+w ou who = informação usuários logados.
+
 COMPACTADORES E DESCOMPACTADORES
 zip <opções> [caminho_do_arquivo.zip] [arquivos_a_ser_compactados] = Compacta arquivo
 unzip = Descompacta arquivo ou apenas lista o conteúdo
@@ -113,6 +127,10 @@ MAIS DETALHES - DIRETÓRIO
 /var/log/auth.log = mostra log com as tentativas de login recebidas.
 /etc/passwd = lista usuários.
 /dev/null = buraco negro do Linux.
+/etc/debian_version = Mostra da distribuição debian
+/etc/redhat-realese = Mostra a distribuição redhat
+/proc/meminfo = Mostra informações da memória.
+
 
 PERMISSÕES DE ACESSO
 r = read (leitura)
