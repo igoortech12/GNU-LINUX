@@ -118,3 +118,5 @@ PERMISSÕES DE ACESSO
 r = read (leitura)
 w = write (gravação)
 x = execute (execução)
+
+TESTE COMMIT 
