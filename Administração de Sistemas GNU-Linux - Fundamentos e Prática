@@ -81,6 +81,16 @@ df -h = informação sobre espaço livre em disco.
 du -hs = informação ocupação em disco em um diretório.
 file = exibe o tipo de um determinado arquivo.
 w ou who = informação usuários logados.
+dmesg = hardwares carregados na inicialização
+
+
+CONFIGURAÇÕES DE REDE 
+ifconfig = mostra detalhes da rede
+ip addr = mostra detalhes da rede
+ip address = mostra detalhes da rede
+route -n = detalhes da rota de internet
+route default gw [x.x.x.x] = configura gateway até próxima reboot
+
 
 COMPACTADORES E DESCOMPACTADORES
 zip <opções> [caminho_do_arquivo.zip] [arquivos_a_ser_compactados] = Compacta arquivo
