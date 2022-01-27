@@ -81,8 +81,11 @@ df -h = informação sobre espaço livre em disco.
 du -hs = informação ocupação em disco em um diretório.
 file = exibe o tipo de um determinado arquivo.
 w ou who = informação usuários logados.
-dmesg = hardwares carregados na inicialização
-
+dmesg = hardwares carregados na inicialização.
+lspci = informações de chipset e dispositovos PCI.
+lsusb = informações dispositivos usb conectado.
+lsmod = lista modulos (drivers).
+fdisk -l = lista dispositivos de armazenamento conectados.
 
 CONFIGURAÇÕES DE REDE 
 ifconfig = mostra detalhes da rede
@@ -107,6 +110,7 @@ tar <opções> [arquivo] <opções || caminho_a_ser_compactado> = Empacota, Comp
         • j  Modo de operação com o comando compactador “bzip2”.
         • f  Modo de operação com arquivos (o padrão é dispositivo de fita);     
 
+ATALHOS
 CTRL + ALT + DEL = reinicia o sistema.
 CTRL + D = terminar/encerrar sessão.
 Ctrl + L = limpa a tela.
@@ -140,11 +144,58 @@ MAIS DETALHES - DIRETÓRIO
 /etc/debian_version = Mostra da distribuição debian
 /etc/redhat-realese = Mostra a distribuição redhat
 /proc/meminfo = Mostra informações da memória.
-
+/proc/cpuinfor = informações sobre a CPU.
+/proc/scsi/scsi = informações de disco SATA.
 
 PERMISSÕES DE ACESSO
 r = read (leitura)
 w = write (gravação)
 x = execute (execução)
+
+EDITOR VI (VIM)
+vi -R [nomedoarquivo] = Abre no modo Somente Leitura 
+vi +3 [nomedoarquivo] = Abri o arquivo com o cursor posicionado na linha 3.
+
+
+        INSERIR/MODIFICAR/EXCLUIR
+        i = Habilita a inserção de texto a partir do cursor
+        I = Habilita a inserção de texto no início da onde está o cursor
+        a = Habilita a inserção de texto a direita do cursor
+        A = Habilita a inserção de texto no final da linha onde está o cursor.
+        o = Insere uma nova linha abaixo do cursor e alterna para o modo de inserção.
+        O = Insere uma nova linha acima do cursor e altera para o modo de inserção.
+        s = Apaga o caractere sob o cursor e habilita o modo de inserção.
+        S = Apaga toda a linha atual do cursor e habilita o modo de inserção.
+        r = Entra no modo de inserção apenas apara substituir o caractare do cursor.
+        R = Entra no modo de inserção substituindo os caracteres seguintes.
+
+        COPIAR/RECORTAR E COLAR
+        yy = Copia a linha atual do cursor (utilizando Buffer)
+        p = Cola o texto armazenado no Buffer após o cursor
+        dd = Remove a linha atual do cursor (e envia para o Buffer - recortar)
+        x = Remove o caractere sob o cursor (e envia para o Buffer).
+        X = Remove o caractare à esquerda do cursosr (envia para o Buffer).
+
+        DESFAZER/REFAZER
+        u = Desfaz o último comando/modificação
+        [ctrl]+r = Refaz o último comando/modificação
+        . = O mesmo que o [ctrl]+r 
+
+        PESQUISAR
+        /string = Procura pelo texto "string" a partir do cursor até o final do texto
+        ?string = Procura pelo texto "string" a partir do final do texto.
+        n = Procura a próxima ocorência para a palavra pesquisada. (Ex. string)
+        N = Procura a ocorência anterior da palavra pesquisada. (Ex. string)
+        :s/antiga/nova = Substitui a primeira ocorrência da palavra "antiga" por "nova" na linha atual.
+        :s/antiga/nova/g Substitui todas as ocorrências da palavra "antiga" por "nova" na linha atual.
+        :%s/antiga/nova/g = Substitui todas as ocorrências da palavra "antiga" por "nova" no arquivo.
+
+        SAIR E SALVAR
+        :w = Salva as alterações no arquivo (podendo informar outro nome ao salvar)
+        :q = Sai do editor (Caso nenhuma modificação tenha sido realizada)
+        :q! = Força a saída do editor sem salvar as modificações.
+        :wq = O mesmo que o :x 
+
+
 
 TESTE COMMIT 
