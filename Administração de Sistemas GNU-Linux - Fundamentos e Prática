@@ -195,6 +195,7 @@ vi +3 [nomedoarquivo] = Abri o arquivo com o cursor posicionado na linha 3.
         :q = Sai do editor (Caso nenhuma modificação tenha sido realizada)
         :q! = Força a saída do editor sem salvar as modificações.
         :wq = O mesmo que o :x 
+        :x = Salva as alterações no arquivo e sai do editor.
 
 
 
