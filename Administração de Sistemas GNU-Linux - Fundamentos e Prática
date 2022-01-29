@@ -51,7 +51,8 @@ cat = exibe texto na tela. (ideal para textos curtos)
 more = exibe texto na tela. (ideal para textos grandes)
 less = exibe texto na tela. (ideal para textos grandes)
 head = exibe as primeiras linhas do arquivo.
-tail = exibe as ultimas linhas do arquivo.
+tail = exibe as ultimas linhas do arquivo. 
+        tail -n <quantidade-de-linhas> <diretório>
 dmesg = Exibe caminhos dos hardwares carregados na inicialização.
 
 FILTROS
@@ -140,6 +141,41 @@ DIRETÓRIOS DO LINUX (FHS - FILESYSTEM HIERACHY STANDARD)
 MAIS DETALHES - DIRETÓRIO
 /var/log/auth.log = mostra log com as tentativas de login recebidas.
 /etc/passwd = lista usuários.
+        aluno:x:1001:1001::/home/aluno:/bin/sh
+                • 1º Campo = Login (Nome da credencial/usuário utilizado para o Logon);
+                • 2º Campo = Representa a “senha” do usuário;
+                        • O Segundo campo (senha), pode possuir três caracteres, sendo o “x” para informar que a senha está
+                        contida no arquivo “/etc/shadow”, o “*” para informar que a conta está desabilitada, ou sem
+                        informações “::” para definir que a conta está “sem senha”;
+                • 3º Campo = UID (User Identifier – Número único para identificar o usuário);
+                • 4º Campo = GID (Group Identifier – Identificador numérico do grupo primário ao qual o usuário
+                pertence);
+                • 5º Campo = Comentário (Aceita diversos tipos de caracteres e espaços, onde podemos informar o
+                nome completo ou outras informações);
+                • 6º Campo = Diretório Home (Caminho do diretório padrão do usuário);
+                • 7º Campo = Shell (Define qual Shell será executado pelo usuário após o logon).
+/etc/group = lista grupos.
+        GRUPO:x:1002:aluno
+                • 1º Campo = Nome do grupo;
+                • 2º Campo = Representa a “senha” do grupo (pouco usual, armazenada no arquivo “/etc/gshadow”);
+                • 3º Campo = GID (Group Identifier – Identificador numérico do grupo);
+                • 4º Campo = Usuários membros do grupo (separados por vírgula).
+/etc/shadow = Contém as senhas criptografadas
+        teste:!:19021:0:99999:7:::
+                • 1º Campo = Login (Nome do usuário utilizado para o Logon);
+                • 2º Campo = Senha criptografada (algoritmo “MD5-based” [$1], método “salt” – vide link*);
+                • 3º Campo = Última mudança da senha (Lastchanged – Dia em que a senha foi alterada, considerando
+                a quantidade de dias corridos a partir de 01/01/1970);
+                • 4º Campo = “Minimum Password Age” (Tempo mínimo de dias em que o usuário deve aguardar pra
+                mudar a senha, após uma alteração da mesma);
+                • 5º Campo = “Maximum Password Age” (Tempo em dias que a senha será considerada válida - O valor
+                99999 representa que a senha não expira);
+                • 6º Campo = Warn (Número de dias que antecede a expiração da senha, onde um alerta será enviado
+                ao usuário durante o Logon);
+                • 7º Campo = Inactive (Informa que a conta será desativada após “X” dias em que a senha expirar);
+                • 8º Campo = Expire (Dia em que a senha será automaticamente expirada, considerando a quantidade
+                de dias corridos a partir de 01/01/1970);
+
 /dev/null = buraco negro do Linux.
 /etc/debian_version = Mostra da distribuição debian
 /etc/redhat-realese = Mostra a distribuição redhat
@@ -196,6 +232,20 @@ vi +3 [nomedoarquivo] = Abri o arquivo com o cursor posicionado na linha 3.
         :q! = Força a saída do editor sem salvar as modificações.
         :wq = O mesmo que o :x 
         :x = Salva as alterações no arquivo e sai do editor.
+
+ADMINISTRAÇÃO DE USUÁRIOS E GRUPOS
+useradd = Cria/adiciona um usuário ao sistema
+userdell = Remove um usuário do sistema sem deletar o diretório pessal
+        -r ou -f = Remove com diretório pessoal
+usermod = Altera as propriedades de um usuário
+groupadd = Cria/Adiciona um grupo no sistema
+groupdel = Remove um grupo no sistema
+groupmod = Modifica um grupo no sistema
+        -n = Altera nome do grupo. groupmod -n <novo-nome> <antigo>
+groups = Exibe lista de grupos que determinado usuário é membro.
+passwd = Define a senha de acesso de um usuário
+id = Exibe os grupos e GID vinculados a conta "logada" ou especificada.
+
 
 
 
