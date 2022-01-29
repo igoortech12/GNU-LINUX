@@ -245,7 +245,12 @@ groupmod = Modifica um grupo no sistema
 groups = Exibe lista de grupos que determinado usuário é membro.
 passwd = Define a senha de acesso de um usuário
 id = Exibe os grupos e GID vinculados a conta "logada" ou especificada.
-
+su =  Possibilita que um usuário altere o UID e GID utilizado no momento para o UID
+e GID de um usuário a ser especificado
+sudo = Permite ao usuário logado executar algum comando com privilégios de
+“root” ou do usuário especificado (parâmetro “-u”)
+adduser = Inicia um “wizard” solicitando diversas informações do usuário a ser criado, como
+login, nome, senha, telefone, endereço, grupos, UID, etc:
 
 
 
