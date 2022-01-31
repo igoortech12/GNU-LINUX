@@ -140,6 +140,7 @@ DIRETÓRIOS DO LINUX (FHS - FILESYSTEM HIERACHY STANDARD)
 
 MAIS DETALHES - DIRETÓRIO
 /var/log/auth.log = mostra log com as tentativas de login recebidas.
+/etc/sudoers = lista usuários que possuem determinado nível de privilégios.
 /etc/passwd = lista usuários.
         aluno:x:1001:1001::/home/aluno:/bin/sh
                 • 1º Campo = Login (Nome da credencial/usuário utilizado para o Logon);
@@ -249,9 +250,12 @@ su =  Possibilita que um usuário altere o UID e GID utilizado no momento para o
 e GID de um usuário a ser especificado
 sudo = Permite ao usuário logado executar algum comando com privilégios de
 “root” ou do usuário especificado (parâmetro “-u”)
+vsudo = 
 adduser = Inicia um “wizard” solicitando diversas informações do usuário a ser criado, como
 login, nome, senha, telefone, endereço, grupos, UID, etc:
+chage = define informações do usuário (informações contida no /etc/shadow)
 
+GERENCIAMENTO DE PERMISSÕES
 
 
 TESTE COMMIT 
