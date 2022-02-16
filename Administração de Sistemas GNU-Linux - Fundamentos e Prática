@@ -259,10 +259,17 @@ GERENCIAMENTO DE PERMISSÕES
 chmod = Altera as permissões de acesso a um arquivo ou diretório.
         Ex: chmod [permissões] [arquivo]
         root@ubuntu-server:/# ls -l | grep arquivo.txt 
-        -rw-rw-rw-   1 root teste         36 Jan 27 10:48 arquivo.txt
+        -rw-rw-rw-   1 root teste         
         root@ubuntu-server:/# chmod 777 arquivo.txt 
         root@ubuntu-server:/# ls -l | grep arquivo.txt
-        -rwxrwxrwx   1 root teste         36 Jan 27 10:48 arquivo.txt
+        -rwxrwxrwx   1 root teste         
+
+        Ex2:
+        root@ubuntu-server:/# ls -l | grep arquivo.txt 
+        -rwxrwxrwx   1 root teste         
+        root@ubuntu-server:/# chmod 740 arquivo.txt -v
+        mode of 'arquivo.txt' changed from 0777 (rwxrwxrwx) to 0740 (rwxr-----)
+
         Mode Octal:
                 [r] = 4
                 [w] = 2
@@ -309,4 +316,3 @@ usuário e o grupo proprietário de um arquivo
 
 umask = Exibe ou define a máscara de permissões padrão para a criação de novos arquivos e diretórios.
         Ex: umask <máscara de permissão>
-        
