@@ -256,6 +256,57 @@ login, nome, senha, telefone, endereço, grupos, UID, etc:
 chage = define informações do usuário (informações contida no /etc/shadow)
 
 GERENCIAMENTO DE PERMISSÕES
+chmod = Altera as permissões de acesso a um arquivo ou diretório.
+        Ex: chmod [permissões] [arquivo]
+        root@ubuntu-server:/# ls -l | grep arquivo.txt 
+        -rw-rw-rw-   1 root teste         36 Jan 27 10:48 arquivo.txt
+        root@ubuntu-server:/# chmod 777 arquivo.txt 
+        root@ubuntu-server:/# ls -l | grep arquivo.txt
+        -rwxrwxrwx   1 root teste         36 Jan 27 10:48 arquivo.txt
+        Mode Octal:
+                [r] = 4
+                [w] = 2
+                [x] = 1
+                -------
+                0 = Nenhuma permissão
+                1 = execução
+                2 = Gravação 
+                3 = Gravação e Execução 
+                4 = Leitura 
+                5 = Leitura e Execução 
+                6 = Leitura e Gravação 
+                7 = Leitura, gravação e Execução
 
+        Ex: chmod [arquivo] 777  (Libera Leitura, gravação e Execução para Usuário|Grupo|Outros)
+        Mode Literal:
+                Usuário proprietário = u 
+                Grupo proprietário = g 
+                Outros = o 
+                TODOS = a 
+chgrp = Modifica o GRUPO PROPRIETÁRIO do arquivo.
+        Ex: chgrp [grupo] [arquivo]
+        root@ubuntu-server:/# ls -l | grep arquivo.txt 
+        -rw-rw-rw-   1 root root        
+        root@ubuntu-server:/# chgrp teste arquivo.txt 
+        root@ubuntu-server:/# ls -l | grep arquivo.txt 
+        -rw-rw-rw-   1 root teste        
 
-TESTE COMMIT 
+chown = Altera o USUÁRIO PROPRIETÁRIO (owner) de um arquivo.
+        Ex: chown [owner] [arquivo]
+        root@ubuntu-server:/# ls -l | grep arquivo.txt
+        -rwxrwxrwx   1 root teste        
+        root@ubuntu-server:/# chown igor arquivo.txt 
+        root@ubuntu-server:/# ls -l | grep arquivo.txt
+        -rwxrwxrwx   1 igor teste 
+
+OBS.: Através do comando “chown” podemos modificar em uma única linha de comando o
+usuário e o grupo proprietário de um arquivo
+        root@ubuntu-server:/# ls -l | grep arquivo.txt
+        -rwxrwxrwx   1 igor teste         
+        root@ubuntu-server:/# chown root root arquivo.txt 
+        root@ubuntu-server:/# ls -l | grep arquivo.txt 
+        -rwxrwxrwx   1 root teste         
+
+umask = Exibe ou define a máscara de permissões padrão para a criação de novos arquivos e diretórios.
+        Ex: umask <máscara de permissão>
+        
