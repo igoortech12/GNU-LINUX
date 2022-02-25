@@ -316,3 +316,58 @@ usuário e o grupo proprietário de um arquivo
 
 umask = Exibe ou define a máscara de permissões padrão para a criação de novos arquivos e diretórios.
         Ex: umask <máscara de permissão>
+
+GERENCIAMENTO DE PROCESSOS
+top = Exibe de forma dinâmica informações sobre processos.
+        • %us = Percentual utilizado por processos em “modo usuário” (sem Nice).
+        • %sy = Percentual utilizado por processos do Kernel.
+        • %ni = Processos em “modo usuário” com priorização (Nice).
+        • %id = Percentual disponível/ocioso do Processador (ou núcleo).
+        • %wa = Aguardando operações de I/O (Disco / Rede).
+        • %hi = Percentual utilizado para tratamento de interrupções de Hardware.
+        • %si = Percentual utilizado para tratamento de interrupções de Software.
+        • %st = Percentual utilizado por um Hypervisor (Execução de VM – Steal time).
+
+ps = Exibe por padrão apenas os processos executados em nosso terminal (tty).
+ps ax = Possibilita a visualização de todos os processos em execução no sistema e seu "STATus".
+        STATus:
+                D = O processo está "dormindo" ininterruptivelmente.
+                R = Processo em execução na CPU no momento.
+                S = Parado ou interrompido ("dormindo" esperando um sinal para voltar a execução)
+                T = Parado por um sinal de controle de job (tarefa) ou sob análise.
+                W = Paginação, não será utilizado.
+                X = Processo foi morto e nunca mais visto.
+                Z = Processo em estado "zombie".
+                < = Processo com alta prioridade.
+                N = Processo com baixa prioridade.
+                L = Processo com página bloqueada em memória.
+                s = Processo "lider" de sessão.
+                l = Processo multi-thread
+                + = Processo está em background.
+
+pstree -p = Exibe de forma hierárquica a relação entre os processos (processo pai e processos filhos)
+kill = Permite enviar um sinal para u processo através do seu PID.
+        Ex: kill -9 2130
+killall = Permite enviar um sinal para um ou mais processos através do nome.
+        Ex: killall -15 top 
+
+        TABELA POSIX
+        SIGHUP - 1 - A = Travamento no terminal controlador ou morte do processo controlador.
+        SIGINT - 2 - A = Interrupção originária do teclado via [CTRL] + [C]
+        SIGILL - 4 - C = Instrução ilegal.
+        SIGABRT - 5 - C = Sinal de Abortar, enviado pela função abort.
+        SIGKILL - 9 - AEF = Destruir o processo - Interrupção de emergência.
+        SIGTERM - 15 - A = Encerrar o processo de forma normal
+        SIGCHLD - 17 - B = Processo filho parado ou terminado.
+        SIGCONT - 18 -  = Continuar se interrompido.
+        SIGTSTP - 20 - D = Interromper o processo (Parar/Pausar) - [CTRL] + [Z]
+
+bg <nº> = Envia um processo (job) interrompido para background.
+fg <nº> = Envia um processo (job) interrompido para Foreground.
+jobs -l = Lista os processos interrompidos.
+nice -n <valor> [comando] = Possibilita executar um processo com uma prioridade específica.
+        Ex: nice -n 10 sleep 300 &
+renice = Permite alterar a prioridade de um processo já em execução.
+        Ex: renice -15 10401
+nohup = Permite manter a execução de um processo caso o mesmo receba um sinal SIGHUP (valor 1).
+        Ex: nohup [comando]
