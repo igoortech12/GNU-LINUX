@@ -176,6 +176,8 @@ MAIS DETALHES - DIRETÓRIO
                 • 7º Campo = Inactive (Informa que a conta será desativada após “X” dias em que a senha expirar);
                 • 8º Campo = Expire (Dia em que a senha será automaticamente expirada, considerando a quantidade
                 de dias corridos a partir de 01/01/1970);
+/etc/fstab = Arquivo para determinar quais partições serão montadas automaticamente na inicialização e qual o ponto
+        de montagem.
 
 /dev/null = buraco negro do Linux.
 /etc/debian_version = Mostra da distribuição debian
@@ -412,6 +414,6 @@ mount -t = Montagem de disco.
                 mount -t ext4 /dev/sdb1 /mnt/hd-novo/
 
 mount -l = Lista os discos montados.
-umount -t = Desmonta o Disco.
+umount = Desmonta o Disco.
         Ex: umount /dev/sdb1
 
