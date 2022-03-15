@@ -397,4 +397,21 @@ fdisk /dev/sd* = Particionar disco.
         p = listar partições
         n = criar partição
         g = mudar para GPT
-mkfs
+mkfs = Formatação
+        .fat 
+        .cramfs
+        .ext4
+        .
+        .
+        .
+        Ex: mkfs.ext4 /dev/sdb1
+
+mkswap = Formatação em SWAP
+mount -t = Montagem de disco.
+        Ex:     mkdir /mnt/hd-novo
+                mount -t ext4 /dev/sdb1 /mnt/hd-novo/
+
+mount -l = Lista os discos montados.
+umount -t = Desmonta o Disco.
+        Ex: umount /dev/sdb1
+
