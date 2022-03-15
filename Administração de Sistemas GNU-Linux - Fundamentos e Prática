@@ -390,3 +390,11 @@ GNU/Linux
 • ISO 9660
 • Entre outros...
 
+fdisk -l = Lista discos conectados.
+fdisk /dev/sd* = Particionar disco.
+        m = help
+        w = salvar
+        p = listar partições
+        n = criar partição
+        g = mudar para GPT
+mkfs
