@@ -417,3 +417,60 @@ mount -l = Lista os discos montados.
 umount = Desmonta o Disco.
         Ex: umount /dev/sdb1
 
+REGEX - EXPRESSÕES REGULARES
+Metacaracteres
+        Representantes
+                .       ponto
+                                Ponto (o “curinga” da ER): O ponto pode substituir qualquer caractere, ou seja, casa
+                                com qualquer caractere (inclusive, espaço, TAB, @), porém, apenas um caractere na
+                                posição em que o mesmo está.
+                                • n.o = não, nao, neo, n-o;
+                                • .ala = fala, cala, mala, tala, bala, etc...;
+                                • <.> = <b>, <i>, <n> (padrão muito utilizado em programação como HTML);
+                                • 22.15 = 22:15, 22.15, 22 15, 22-15, 22/15, etc...
+                []      lista
+                                Lista (a “seletiva”): A lista apenas casa com os caracteres especificados dentro da
+                                lista:
+                                • [fm]ala = fala, mala;
+                                • n[ãe]o = não, neo;
+                                • 22[: . ]15 = 22:15, 22.15, 22 15;
+                                • OPS... E o ponto, não casa com qualquer coisa??
+                                • OBS.: Dentro da lista, todo caractere se torna “literal”;
+
+                [^]     lista negada
+        
+        Quantificadores
+                ?       opcional
+                *       asterisco
+                +       mais
+                {}      chaves
+        
+        Âncora
+                ^       circunflexo
+                                Circunflexo (início da linha):
+                                • ^d  Procura por linhas que começam com a letra “d”;
+                                • ^[0-9]  Pesquisam por linhas que comecem com um número de 0 a 9;
+                                • Texto^  Apenas um “circunflexo após a palavra “texto”;
+                                • ^^  Apenas uma linha que começa com o “circunflexo”;
+                                • OBS.: O metacaractere circunflexo é interpretado como “literal” caso não esteja no início da linha.
+                $       cifrão 
+                                Cifrão (final da linha):
+                                • fechado.$  Procura por linhas que terminam com a string “fechado.”;
+                                • ^$  Linha vazia.
+                \b      borda
+                                Borda (a limítrofe): Como o nome diz, marca/define uma borda, ou seja, de forma
+                                mais específica, delimita uma palavra:
+                                • Ex.: Vamos supor que desejamos procurar pela palavra “dia” em um texto que possui além da
+                                palavra “dia” as palavras “melodia”, “diafragma”, “radial” e “bom-dia!”.
+                                • dia  dia, melodia, diafragma, radial, bom-dia!;
+                                • \bdia  dia, diafragma, bom-dia!;
+                                • dia\b  dia, melodia, bom-dia!;
+                                • \bdia\b  dia, bom-dia!;
+
+
+        Outros
+                \       escape
+                |       ou
+                ()      grupo
+                \1      retrovisor
+        
