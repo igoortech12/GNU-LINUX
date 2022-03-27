@@ -90,11 +90,12 @@ fdisk -l = lista dispositivos de armazenamento conectados.
 
 CONFIGURAÇÕES DE REDE 
 ifconfig = mostra detalhes da rede
+        ifconfig <INTERFACE DE REDE>:1 <IP> = fazer alies de IP 
 ip addr = mostra detalhes da rede
 ip address = mostra detalhes da rede
 route -n = detalhes da rota de internet
 route default gw [x.x.x.x] = configura gateway até próxima reboot
-
+dhclient <INTERFACE DE REDE> = pega IP em DHCP.
 
 COMPACTADORES E DESCOMPACTADORES
 zip <opções> [caminho_do_arquivo.zip] [arquivos_a_ser_compactados] = Compacta arquivo
@@ -140,6 +141,8 @@ DIRETÓRIOS DO LINUX (FHS - FILESYSTEM HIERACHY STANDARD)
 
 MAIS DETALHES - DIRETÓRIO
 /var/log/auth.log = mostra log com as tentativas de login recebidas.
+/etc/resolv.conf = conhecer redes.
+/etc/hosts = ip por host.
 /etc/sudoers = lista usuários que possuem determinado nível de privilégios.
 /etc/passwd = lista usuários.
         aluno:x:1001:1001::/home/aluno:/bin/sh

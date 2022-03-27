@@ -1,0 +1,36 @@
+Aula 01 - Bem vindo ao maravilhoso mundo do Linux
+
+CERTIFICAÇÕES
+    Linux Professional Institute
+    Linux Foundation
+    Red Hat Certification
+
+LICENÇAS OPEN SOURCE
+    Free Software Foundation
+    Software Livre
+    GNU GPL (General Public License)
+
+Aula 02 - Primeiros passos no Linux
+    Gateway: Ponte acesso/Porta de acesso para outra rede.
+    Broadcast: Fala com todos da rede.
+    Mascara de rede: Define quantos IPs serão destinados à rede,
+    e quantos IPs serão destinados aos hosts.
+        Classes:
+            A
+            B
+            C /24 - 255.255.255.0
+            D
+        Calculo Sub
+            Endereco IP = numero de 4 octetos
+                        1 OCTETO 
+            128 | 64 | 32 | 16 | 8 | 4 | 2 | 1
+
+            /24 - 255.255.255.0
+                11111111.11111111.11111111.0
+            /27 - 255.255.255.224
+                11111111.11111111.11111111.11100000
+    Comandos:
+        # ifconfig
+        # route -n
+        # ping 
+        
