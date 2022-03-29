@@ -1,14 +1,13 @@
 Aula 01 - Bem vindo ao maravilhoso mundo do Linux
+    CERTIFICAÇÕES
+        Linux Professional Institute
+        Linux Foundation
+        Red Hat Certification
 
-CERTIFICAÇÕES
-    Linux Professional Institute
-    Linux Foundation
-    Red Hat Certification
-
-LICENÇAS OPEN SOURCE
-    Free Software Foundation
-    Software Livre
-    GNU GPL (General Public License)
+    LICENÇAS OPEN SOURCE
+        Free Software Foundation
+        Software Livre
+        GNU GPL (General Public License)
 
 Aula 02 - Primeiros passos no Linux
     Gateway: Ponte acesso/Porta de acesso para outra rede.
@@ -34,3 +33,94 @@ Aula 02 - Primeiros passos no Linux
         # route -n
         # ping 
         
+    TERMINAIS VIRTUAIS
+        CAMADAS/PASSOS PARA INICIALIZAÇÃO DO SISTEMA
+            Botão Power
+                BIOS/MBR
+                    Gerenciador de boot (grub2)
+                        kernel
+                            init
+                                Gerenciador de login
+                                    Desktop
+        
+        TERMINAIS TTY
+            TTY1 a 6 por default
+            Mudar entre ambiente gráfico e terminal: Ctrl + Alt + F7
+            Mudar entre terminais TTY: Alt + 1 a 6
+    
+    ENTRANDO EM SESSÃO
+        su - <USER-NAME>: entrar como root
+        sudo su: dá priivlégios como root
+        bash: nova sessão do usuário atual
+
+    ENCERRADO SESSÃO
+        exit
+        Ctrl + D
+
+    DESLIGANDO COMPUTADOR
+        shutdown -h now
+        shutdown -h 0
+            Temporizar desligamento (10min): shutdown -h 10
+            Temporizar desligamento (17:00): shutdown -h 17:00
+        halt -p
+        poweroff
+        init 0
+
+    REINICIANDO COMPUTADOR
+        shutdown -r now
+        shutdown -r 0
+            Temporizar desligamento (10min): shutdown -r 10
+        init 6
+        reboot
+    
+    SHELL
+        Tipos
+            sh (Bourne shell)
+            bash (Bourne Again shell)
+            csh (C shell)
+            tcsh (Turbo C shell)
+            ksh (Korn shell)
+            zsh (Z shell)
+    
+    VARIÁVEIS
+        echo $HOME: Diretório do usuário.
+        echo $HOSTTYPE: Plataforma que está sendo usada.
+        echo $SHELL: Shell utilizado.
+        echo $TERM: Terminal que está sendo usado.
+        echo $USER: Nome da conta global.
+        echo $PATH: Sequência para ser seguida para encontrar um determinado comando.
+        echo $PS1: Informações exibidas no prompt.
+        echo $PS2: Prompt estendido.
+        echo $MAIL: Correido definido.
+        echo $LOGNAME: Sinônimo da variável USER.
+        echo $OSTYPE: Tipo de sistema operacional que está sendo usado.
+
+        VER AS VERIÁVEIS DISPONÍVEIS
+            set: variáveis local
+            env: variáveis globais
+            printenv
+
+            Arquivo para editar variáveis
+                cat /etc/profile
+                cat /etc/environment
+    
+    ARQUIVOS DE CONFIGURAÇÃO
+        Arquivos da inicialização
+            cat /etc/profile
+            cat /etc/environment
+            cat /root/.bashrc
+            cat /root/.profile
+        
+        Arquivos de exibição de mensagem
+            Mensagem antes do login do sistema
+                /etc/issue
+            Mensagem após o login do sistema
+                /etc/motd
+            Mensagem via rede, via login remoto
+                /etc/issue.net
+    
+    CAMINHOS DE DIRETÓRIOS
+        .   Diretório corrente
+        ..  Diretório pai 
+        /   Diretório raiz
+        \-  Diretório anterior 
