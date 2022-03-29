@@ -184,3 +184,33 @@ Aula 03 - Obtendo ajuda no Linux (explainshell.com)
                 /usr/bin/ls
             # which ifconfig
                 /usr/bin/ifconfig
+
+Aula 04 - Filesystem Hierarchy Standard e Comandos Indispensáveis
+    FHS, HIERARQUIA DOS DIRETÓRIOS
+        Definição, Arquitetura e Estrutura (POSIX) - Arvore de Diretório
+            /       -   home
+            /bin    -   binários essenciais do usuário
+            /boot   -   arquivos estáticos de boot 
+            /dev    -   arquivos de dispositivos (devices)
+            /etc    -   arquivos de configuração não específicos
+            /home   -   pastas dos usuários comuns do sistema
+            /lib    -   bibliotecas compartilhadas pelos programas do sistema e módulos do kernel
+            /media  -   ponto de montagem temporario para midias removiveis
+            /mnt    -   ponto de montagem temporario para sistemas de arquivos montados
+            /opt    -   softwares adicionais (adicionados pelo usuario)
+            /sbin   -   binários do sistema
+            /srv    -   dados para serviços providos pelo sistema
+            /tmp    -   arquivos temporarios
+            /usr    -   multi-usuario utilizados e aplicações
+            /var    -   arquivos variaveis (conteúdo dinâmico)
+            /root   -   home superusuario
+            /proc   -   sistema de arquivos virtual. documentos do kernel e status de processos como arquivo de texto
+
+
+
+    DEFINIÇÃO DOS DIRETÓRIOS
+
+    COMANDOS GNU/LINUX
+
+    LOCALIZAÇÃO NO SISTEMA - FIND E LOCATE
+

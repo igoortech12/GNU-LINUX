@@ -134,7 +134,7 @@ DIRETÓRIOS DO LINUX (FHS - FILESYSTEM HIERACHY STANDARD)
 /home   Diretório que contém os subdiretórios de cada usuário (análogo ao "Users" ou o antigo "Documents and Settings").
 /dev    Permite acesso aos dispositivos do sistema.
 /lib    Bibliotecas compartilhadas pelos programas do sistema e módulos do kernel.
-/proc   Sistema de arquivos do kernal. Este diertório não existe em seu disco rígido, ele é criado pelo kernel e usado 
+/proc   Sistema de arquivos do kernel. Este diertório não existe em seu disco rígido, ele é criado pelo kernel e usado 
         por diversos programas que fazem sua leitura. Através de seu conteúdo podemos verificar configurações do sistema 
         ou modificar o funcionamento de dispositivos através de alterações em seus arquivos (como a funçõa de roteamento).
 /usr    Contém arquivos e aplicativos de usuários do sistema, "documentações" do sistema, entre outros tipos de arquivo.
