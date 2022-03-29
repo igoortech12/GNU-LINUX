@@ -49,29 +49,29 @@ Aula 02 - Primeiros passos no Linux
             Mudar entre terminais TTY: Alt + 1 a 6
     
     ENTRANDO EM SESSÃO
-        su - <USER-NAME>: entrar como root
-        sudo su: dá priivlégios como root
-        bash: nova sessão do usuário atual
+       # su - <USER-NAME>: entrar como root
+       # sudo su: dá priivlégios como root
+       # bash: nova sessão do usuário atual
 
     ENCERRADO SESSÃO
-        exit
+        # exit
         Ctrl + D
 
     DESLIGANDO COMPUTADOR
-        shutdown -h now
-        shutdown -h 0
-            Temporizar desligamento (10min): shutdown -h 10
-            Temporizar desligamento (17:00): shutdown -h 17:00
-        halt -p
-        poweroff
-        init 0
+       # shutdown -h now
+       # shutdown -h 0
+            Temporizar desligamento (10min): # shutdown -h 10
+            Temporizar desligamento (17:00): # shutdown -h 17:00
+       # halt -p
+       # poweroff
+       # init 0
 
     REINICIANDO COMPUTADOR
-        shutdown -r now
-        shutdown -r 0
-            Temporizar desligamento (10min): shutdown -r 10
-        init 6
-        reboot
+       # shutdown -r now
+       # shutdown -r 0
+            Temporizar desligamento (10min): # shutdown -r 10
+       # init 6
+       # reboot
     
     SHELL
         Tipos
@@ -83,33 +83,33 @@ Aula 02 - Primeiros passos no Linux
             zsh (Z shell)
     
     VARIÁVEIS
-        echo $HOME: Diretório do usuário.
-        echo $HOSTTYPE: Plataforma que está sendo usada.
-        echo $SHELL: Shell utilizado.
-        echo $TERM: Terminal que está sendo usado.
-        echo $USER: Nome da conta global.
-        echo $PATH: Sequência para ser seguida para encontrar um determinado comando.
-        echo $PS1: Informações exibidas no prompt.
-        echo $PS2: Prompt estendido.
-        echo $MAIL: Correido definido.
-        echo $LOGNAME: Sinônimo da variável USER.
-        echo $OSTYPE: Tipo de sistema operacional que está sendo usado.
+       # echo $HOME: Diretório do usuário.
+       # echo $HOSTTYPE: Plataforma que está sendo usada.
+       # echo $SHELL: Shell utilizado.
+       # echo $TERM: Terminal que está sendo usado.
+       # echo $USER: Nome da conta global.
+       # echo $PATH: Sequência para ser seguida para encontrar um determinado comando.
+       # echo $PS1: Informações exibidas no prompt.
+       # echo $PS2: Prompt estendido.
+       # echo $MAIL: Correido definido.
+       # echo $LOGNAME: Sinônimo da variável USER.
+       # echo $OSTYPE: Tipo de sistema operacional que está sendo usado.
 
         VER AS VERIÁVEIS DISPONÍVEIS
-            set: variáveis local
-            env: variáveis globais
-            printenv
+           # set: variáveis local
+           # env: variáveis globais
+           # printenv
 
             Arquivo para editar variáveis
-                cat /etc/profile
-                cat /etc/environment
+               # cat /etc/profile
+               # cat /etc/environment
     
     ARQUIVOS DE CONFIGURAÇÃO
         Arquivos da inicialização
-            cat /etc/profile
-            cat /etc/environment
-            cat /root/.bashrc
-            cat /root/.profile
+           # cat /etc/profile
+           # cat /etc/environment
+           # cat /root/.bashrc
+           # cat /root/.profile
         
         Arquivos de exibição de mensagem
             Mensagem antes do login do sistema
@@ -124,3 +124,63 @@ Aula 02 - Primeiros passos no Linux
         ..  Diretório pai 
         /   Diretório raiz
         \-  Diretório anterior 
+
+Aula 03 - Obtendo ajuda no Linux (explainshell.com)
+    How-to's
+       # ls /usr/share/doc
+    Manuais
+       # man + COMANDO = manual completo do comando. (Ex: man ls)
+       # man -k = apropos
+       # man -f = whatis
+    Documentação
+
+    Comando help
+       # help: Visualizar uma ajuda rápida para todos os comnados internos do sistemas.
+       # help <COMANDO>
+            # help type
+       # help help
+            # <COMANDO> --help
+            # ls --help
+            
+    Comando apropos
+        # apropos <OPÇÃO ..> PALAVRA-CHAVE: pesquisa por comando que relaciona com a palavra chave descrita.
+           # apropos compress: essa pesquisa trará tudo sobre compactação e descompactação de arquivos.
+           # apropos email
+           # apropos email address
+
+    Comando whatis
+        # whatis <COMANDO>
+        # whatis vim: descreve o que o comando VIM faz.
+        # catman: Comando Debiam que atualiza banco de dados dos comandos disponiveis.
+    
+    Comando man 
+        ls /usr/share/man
+        man 1: Programas e executáveis disponíveis ao usuário.
+        man 2: Rotinas de sistema Unix e C.
+        man 3: Rotinas de bibliotecas da linguagem C.
+        man 4: Arquivos especiais (disponíveis em /dev).
+        man 5: Arquivos de configuração e convenções.
+        man 6: Games.
+        man 7: Diversos (macros textuais).
+        man 8: Comandos administrativos.
+        man 9: Rotinas internas do kernel.
+
+        ex: # man passwd (sem referenciar a "categoria" do man, esse busca sempre retornará a primeira categoria)
+            # man 5 passwd (especificado a categoria 5 - aqruivos de configuração e convenções)
+    
+    Comando info
+        # info: Exibe a lsita de todos os manuais de comandos/programas disponíveis.
+            # info <COMANDO>
+            # info vim
+    
+    Comando whereis
+        # whereis <COMANDO>: retorna a localização do binário e do manual do comando.
+            # whereis ifconfig
+                ifconfig: /usr/sbin/ifconfig /usr/share/man/man8/ifconfig.8.gz
+
+    Comando which
+        # which <COMANDO>: retorna localização do binário do comando.
+            # which ls
+                /usr/bin/ls
+            # which ifconfig
+                /usr/bin/ifconfig
