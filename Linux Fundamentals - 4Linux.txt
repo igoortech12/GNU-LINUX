@@ -259,7 +259,7 @@ Aula 04 - Filesystem Hierarchy Standard e Comandos Indispensáveis
         cp -p   -   copiar arquivo ou diretorio sem mudar as caracteristicas originais 
         mv  -   mover arquivo/diretorio ou renomea arquivo/diretorio 
     
-    LOCALIZAÇÃO NO SISTEMA - FIND E LOCATE
+    LOCALIZAÇÃO NO SISTEMA - FIND
         FIND    -   Procura por arquivos/diretório no disco
             -name [expressao]   -   Procura pela [expressao] definida nos nomes de arquivos e diretorios processados.
                 find /etc -name *.conf
@@ -268,7 +268,5 @@ Aula 04 - Filesystem Hierarchy Standard e Comandos Indispensáveis
             -user[nome] -   Procura por arquivos que pertençam ao usuário aluno [nome]
                 find / -user aluno
             
-            find /root -type f -perm 777
-            find / -type f -empty
-
-            
+            find /root -type f -perm 777    -   pesquisa por arquivos que possuam permissao 777
+            find / -type f -empty   -   pequisa por arquivos vazios
