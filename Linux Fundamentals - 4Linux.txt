@@ -270,3 +270,22 @@ Aula 04 - Filesystem Hierarchy Standard e Comandos Indispensáveis
             
             find /root -type f -perm 777    -   pesquisa por arquivos que possuam permissao 777
             find / -type f -empty   -   pequisa por arquivos vazios
+
+Revisão e Prática 1
+>   pwd
+>   man ls
+>   cd -
+>   man print, apropos print
+>   ctrl+L ou clear
+>   ls /usr/share/man
+>   history | tail -3 ou fc -l -3
+>   cd /
+>   find / -name halt ou which halt
+>   shutdown -r 15
+
+Revisão e Prática 2
+>   touch auditoria.log
+>   
+>   cd /etc/skel | mkdir {Documentos,Planilhas,Lixeira}
+>   ls -r /etc/skel OU ls -R /etc/skel OU tree /etc/skel
+>   ls -a /etc/
