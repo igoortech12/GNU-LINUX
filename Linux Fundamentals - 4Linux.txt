@@ -206,11 +206,69 @@ Aula 04 - Filesystem Hierarchy Standard e Comandos Indispensáveis
             /root   -   home superusuario
             /proc   -   sistema de arquivos virtual. documentos do kernel e status de processos como arquivo de texto
 
-
-
-    DEFINIÇÃO DOS DIRETÓRIOS
-
     COMANDOS GNU/LINUX
+        ls -l 
+            EX: drwxr-xr-x 2 root root 
+        Significado da primeira letra da busca.
+        d -> Diretório
+        l -> Atalho (Link)
+        - -> Arquivo regular
+        c -> Dispositivo de caractere (sem buffer)
+        b -> Dispositivo de bloco (com buffer)
+        u -> Dispositivo de caractere (sem buffer) = c 
+        s -> Socket
+        p -> Fifo, named 
 
+        Conbinações com comando ls
+        ls -lR - REsposta será em forma recursiva.
+        ls -ld /*n - Retornará apenas os diretórios ternimado com a letra n presentes no direttório /
+        ls /etc/*.conf - Retornará apenas arquivos com final .conf ques estão no diretório /etc      
+    
+        Palavras Curingas
+            *   -   Utilizado para um nome completo ou restante de um arquivo/diretório
+            ?   -   Substituir uma ou mais letras em determinada posição
+            !   -   exclui da operação
+            [padrao]    -   referenciar a uma faixa de caracteres de um arquivo/diretório
+            [a-z][0-9]  -   Trabalhar  com caracteres de a até z seguidos de um caractere de 0 até 9
+            [a,z][1,0]  -   Trabalhar com caracteres a e z seguidos de uma caractere 1 ou 0 naquela posição
+            [a-z,1,0]   -   Refer intervalo de caracteres de a até z ou 1 ou 0 naquela posição
+            [^ abc]  -  referenciar qualquer caractere a, b e c 
+            {padrão}    -   Expande e gera strings para pesquisar de padrões de um arquivo/diretório
+            X{AB,01}    -   referenciar a Sequência de caracteres Xab ou X01
+            X{a-e,10}   -   referenciar a Sequência de caracteres Xa Xb Xc Xd Xe X10  
+
+        mkdir   -   cria diretório
+        mkdir -p    -   permite criar um diretorio com sub diretorio
+            ex: mkdir -p Financeiro/Contas
+                mkdir -p Mae/{Filho1/{Neto1,Neto2},Filho2/{Neto1,Neto2}}
+                    Mae/
+                    ├── Filho1
+                    │   ├── Neto1
+                    │   └── Neto2
+                    └── Filho2
+                        ├── Neto1
+                        └── Neto2
+        
+        touch   -   cria aqruivo
+        rm  -   remover arquivo 
+        rm -i   -   remover arquivo com confirmação
+        rm -r   -   remover diretorio com arquivos
+        rm -i -r OU rm -ri OU  rm -ir   -   remove diretorio com confirmação 
+        rmdir   -    remove diretorio vazio
+        cp  -   copiar arquivo ou diretorio 
+        cp -p   -   copiar arquivo ou diretorio sem mudar as caracteristicas originais 
+        mv  -   mover arquivo/diretorio ou renomea arquivo/diretorio 
+    
     LOCALIZAÇÃO NO SISTEMA - FIND E LOCATE
+        FIND    -   Procura por arquivos/diretório no disco
+            -name [expressao]   -   Procura pela [expressao] definida nos nomes de arquivos e diretorios processados.
+                find /etc -name *.conf
+            -uid[num]   -   Procura por arquivos que pertençam ao usuário com iud 1000 [num]
+                find / -uid 1000
+            -user[nome] -   Procura por arquivos que pertençam ao usuário aluno [nome]
+                find / -user aluno
+            
+            find /root -type f -perm 777
+            find / -type f -empty
 
+            
