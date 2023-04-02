@@ -6,7 +6,7 @@ MODOS DE UTILIZAÇÃO (TEXTO/GRÁFICO)
 6 sessões em modo texto (ALT + F1 AO F6)
 2 sessões em modo gráfico (ALT + F7/F8)
 
-COMANDOS
+COMANDOS AVULSOS
 history = mostra o histórico de comandos usados
 clear = limpa a tela.
 loadkeys br-abnt2 = define teclado pt-br.
@@ -54,6 +54,13 @@ head = exibe as primeiras linhas do arquivo.
 tail = exibe as ultimas linhas do arquivo. 
         tail -n <quantidade-de-linhas> <diretório>
 dmesg = Exibe caminhos dos hardwares carregados na inicialização.
+
+AJUDAS
+info Manual detalhado de um comando.
+man Manual detalhado de um comando.
+help Usado ao final de um comando para saber mais detalhes. Ex: clear --help ou clear -h
+apropos Informação rápida sobre um comando
+whatis Informação rápida sobre um comando
 
 FILTROS
 grep <opções> = Pesquisa em arqivos ou em sua entrada padrão por sequência de caracteres informada. 
