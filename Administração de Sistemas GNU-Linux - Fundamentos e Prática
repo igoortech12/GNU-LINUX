@@ -54,13 +54,23 @@ head = exibe as primeiras linhas do arquivo.
 tail = exibe as ultimas linhas do arquivo. 
         tail -n <quantidade-de-linhas> <diretório>
 dmesg = Exibe caminhos dos hardwares carregados na inicialização.
+pr = Prepara para impressão.
+pr -h = Muda cabeçalho da impressão.
+sed = Substitui/Deleta uma palavra informada durante a leitura da primeira e/ou todas ocorrencia 
+(palavra encontrada) e apresentação do arquivo.
+        Ex:     sed 's/igor/oliveira/' /etc/passwd
+                sed 's/igor/oliveira/g' /etc/passwd
+                sed '/igor/d' /etc/passwd
+nl = Retorna um texto enumerando as linhas.
+cat -n = Retorna um texto enumerando as linhas.
+cut = Corta. Ex: cut -c1,2,3 <nome-do-arquivo> ou cut -c1-3 <nome-do-arquivo>
 
 AJUDAS
-info Manual detalhado de um comando.
-man Manual detalhado de um comando.
-help Usado ao final de um comando para saber mais detalhes. Ex: clear --help ou clear -h
-apropos Informação rápida sobre um comando
-whatis Informação rápida sobre um comando
+info = Manual detalhado de um comando.
+man = Manual detalhado de um comando.
+help = Usado ao final de um comando para saber mais detalhes. Ex: clear --help ou clear -h
+apropos = Informação rápida sobre um comando
+whatis = Informação rápida sobre um comando
 
 FILTROS
 grep <opções> = Pesquisa em arqivos ou em sua entrada padrão por sequência de caracteres informada. 
@@ -94,6 +104,7 @@ lspci = informações de chipset e dispositovos PCI.
 lsusb = informações dispositivos usb conectado.
 lsmod = lista modulos (drivers).
 fdisk -l = lista dispositivos de armazenamento conectados.
+dmesg = Exibe caminhos de hardwares carregados na inicialização.
 
 CONFIGURAÇÕES DE REDE 
 ifconfig = mostra detalhes da rede
